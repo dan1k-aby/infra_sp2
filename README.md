@@ -22,9 +22,11 @@ DB_PORT=5432
 Переходим в директорию infra и прописываем docker-compose up
 
 После в контейнере web:
+```
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
+```
 
 ### Алгоритм регистрации пользователей
 
